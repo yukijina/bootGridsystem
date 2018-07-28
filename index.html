@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Bootstrap Grid System</title>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- ORIGINAL CSS -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+  </head>
+
+  <body>
+    <h1 class="text-center my-5 font-weight-bold">Bootstrap 4 Grid System</h1>
+
+    <div class="container">
+      <div class="row">
+        <!-- upper left side -->
+        <div class="col-6 py-3 one">
+          <div class="col-12 p-0 onein">
+              <p class="m-0 text-white">
+               Left side col-6<br>
+               I am col-12 inside col-6. <span class="font-weight-bold">without</span> "row"<br>
+              "row col-12 col-6"<br>
+               Dark blue color is my parent, col-6.<br>
+               p-0 m-0 myself. Parent has mx-0, py-3 & default px, that gives space between parent and child.<br>
+               Good to use col-12 nesting when you want to create space between next column.
+             </p>
+          </div>
+        </div>
+        <!-- upper right side -->
+        <div class="col-6 py-3 m-0 two">
+          <div class="col-12 twoin">
+            <p class="text-white">
+            Right side col-6.<br>
+            As same as left side, I am col-12 inside col-6.<br>
+            Light pink color is my parent py-3 m-0<br>
+            My parent has two nesting below.
+           </p>
+          </div>
+          <div class="row">
+            <div class="col-8 two-one my-2">
+              <p class="text-white">
+              col-8 nested.<br>
+              I have my-2 so you can see vertical space.
+             </p>
+            </div>
+            <div class="col-4 two-two">
+              <p class="text-white">
+              col-4 nested. default style
+             </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- middle (2nd and 3rd row) section -->
+      <div class="row">
+        <!-- middle left side -->
+        <div class="col three">
+          <p class="text-white">
+          col (1/4) - col number is not set for next 4 col<br>
+          This column has border top, <span class="font-weight-bold">right</span> and bottom each 5px.<br>
+          Border can easily give the space between column without collapsing style.
+         </p>
+        </div>
+        <!-- middle upper right side -->
+        <div class="col four">
+          <p class="text-white">
+          col (2/4)<br>
+          This colum has also border.<br>
+          This column has border top, <span class="font-weight-bold">left</span> and bottom each 5px.
+         </p>
+        </div>
+
+        <!-- w-100 can break the column to new line  -->
+        <div class="w-100"></div>
+
+        <!-- middle lower left side -->
+        <div class="col five">
+          <p class="text-white">
+            col (3/4)<br>
+            There is "style w-100" above me, which can break col to new line.<br>
+            So col (3/4) and col (4/4) is below col (1/4) and col (2/4)
+          </p>
+        </div>
+
+        <!-- middle lower right side -->
+        <div class="col six">
+          <p class="text-white">
+            col (4/4)
+          </p>
+        </div>
+     </div>
+
+     <!-- Bottom  -->
+     <div class="row">
+       <!-- Bottom left side -->
+       <div class="col-6 py-3 one">
+         <div class="row">
+           <div class="col-12 p-0 onein">
+               <p class="m-0 text-white">
+                Left side col-6<br>
+                I am col-12 inside col-6. <span class="font-weight-bold">with</span> row. Nesting.<br>
+                Parent "row col-12", Child "<span class="font-weight-bold">row</span> col-6"<br><br>
+                Style is as same as the first row.<br>
+                Only difference is "row" is added after parent col-6.<br>
+                I would add padding to make space between borders, however to add margin is not good idea because it is marged/cleared to right column.
+              </p>
+           </div>
+         </div>
+       </div>
+
+       <!-- Bottom right side -->
+       <div class="col-6 py-3 m-0 two">
+         <div class="col-12 twoin">
+           <p class="text-white">
+             Right side col-6.<br>
+             Same style as first row. I am  col-12 inside col-6.<br>
+             Light pink color is my parent py-3 m-0<br>
+             My parent has two colums below without "row", that makes two colums not display each other horizontally.
+          </p>
+         </div>
+
+           <div class="col-8 two-one my-2">
+             <p class="text-white">
+             col-8 wi.<br>
+             I have my-2.
+            </p>
+           </div>
+           <div class="col-4 two-two">
+             <p class="text-white">
+             col-4 nested. default style
+            </p>
+           </div>
+         </div>
+       </div>
+
+       <!-- Crete space vertically -->
+       <div class="w-100 space"></div>
+
+       <!-- memo section -->
+       <div class="row">
+         <div class="col-12 px-5 seven">
+           <h2 class="text-white">memo</h2>
+           <p class="text-white">"row" - wrappers for columns (col)<br>
+           "col" - has default horizontal padding, that can give space between next col. This is good.<br>
+           However if you have whole background in col, it is good idea to style with  "border" or create nasted col inside parent col.</p>
+
+           <h4 class="text-white">Controlling space btween colums</h4>
+           <ul class="text-white">
+             <li>add padding</li>
+             <li>add border</li>
+             <li>create nesting col</li>
+           </ul>
+         </div>
+       </div>
+
+
+   </div>  <!-- the end of contianer -->
+
+
+
+
+
+
+    <!-- JS FOR BOOTSTRAP -->
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- ORIGINAL SCRIPT -->
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
+
+  </body>
+
+</html>

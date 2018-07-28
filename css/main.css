@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-bottom: 10%;
+  font-family: 'Inconsolata', monospace;
+}
+
+.one {
+  background-color: #293132;
+}
+
+.onein {
+  background-color: #053C5E;
+}
+.two {
+  background-color: #FFCDB2;
+}
+.twoin {
+  background-color: #FFB4A2;
+}
+
+.two-one {
+  background-color: #E5989B;
+}
+
+.two-two {
+  background-color: #B5838D;
+}
+
+.three {
+  background-color: #DF6C47;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+.four {
+  background-color: #B91E45;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+.five {
+  background-color: #F75B82;
+}
+
+.six {
+  background-color: #2EC4B6;
+}
+
+.space {
+  border: 10px solid #fff;
+}
+
+.seven {
+  background-color: #DB504A;
+}
